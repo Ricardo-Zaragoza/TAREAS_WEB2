@@ -4,31 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enviar mensaje por WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #25d366;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #34b7f1;
+            color: white;
+            padding: 14px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #007b8f;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1 style="text-align: center;">Enviar mensaje a WhatsApp</h1>
-    </header>
-
-    <div style="margin: 50px;">
-        <div>
-            <!-- El número ya está fijo -->
-            <p><strong>Enviarás el mensaje al número:</strong> 5540685734</p>
-
-            <label for="mensaje">Escribe tu mensaje:</label><br>
-            <textarea id="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje aquí..." required
-            style="width: 100%; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); resize: vertical;">
-        </textarea>
+    <div class="container">
+        <h1>Enviar mensaje por WhatsApp</h1>
         
-            <br><br>
-
-            <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+        <div class="input-group">
+            <label for="telefono">Número de teléfono:</label>
+            <input type="text" id="telefono" placeholder="Número con +52" value="+5260005471">
         </div>
+
+        <div class="input-group">
+            <label for="mensaje">Escribe tu mensaje:</label>
+            <textarea id="mensaje" placeholder="Texto a enviar..." rows="4"></textarea>
+        </div>
+
+        <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
     </div>
 
+    <script src="app.js"></script>
 </body>
-
-<script src="app.js"></script>
-
 </html>

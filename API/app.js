@@ -1,6 +1,10 @@
 function enviarWhatsApp() {
-    // Tu número ya fijo con el código de país 52 (México)
-    let numero = "5240685734"; 
+    let numero = document.getElementById('telefono').value.trim(); 
+
+    if (!numero || !numero.startsWith('+52')) {
+        alert("Por favor, ingresa un número de teléfono válido con código de país.");
+        return;
+    }
 
     let mensaje = document.getElementById('mensaje').value.trim();
 
@@ -13,6 +17,5 @@ function enviarWhatsApp() {
 
     let url = `https://api.whatsapp.com/send?phone=${numero}&text=${mensajeCodificado}`;
 
-    // Abrir WhatsApp en una nueva pestaña
     window.open(url, '_blank');
 }

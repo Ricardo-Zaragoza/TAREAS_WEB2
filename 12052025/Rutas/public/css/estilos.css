@@ -1,0 +1,93 @@
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f8b500;
+  text-shadow: 2px 2px 8px rgba(248, 181, 0, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0 0 8px #f8b500;
+}
+
+button {
+  background: #f8b500;
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(248, 181, 0, 0.6);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #222;
+  color: #f8b500;
+  box-shadow: 0 6px 12px rgba(248, 181, 0, 0.9);
+}
+
+a {
+  color: #f8b500;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 1.5rem;
+    width: 95%;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
